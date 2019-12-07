@@ -75,7 +75,7 @@ class _MyAppState extends State<RegisterPage> {
                         width: ScreenUtil.getInstance().setWidth(110),
                         height: ScreenUtil.getInstance().setHeight(110),
                       ),
-                      Text("Urban Track",
+                      Text("Let's Talk",
                           style: TextStyle(
                               fontFamily: "Poppins-Bold",
                               fontSize: ScreenUtil.getInstance().setSp(46),

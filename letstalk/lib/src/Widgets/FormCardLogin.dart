@@ -27,7 +27,6 @@ class FormCard extends StatelessWidget {
           children: <Widget>[
             Text("Iniciar sesión",
                 style: TextStyle(
-                  
                     fontSize: ScreenUtil.getInstance().setSp(45),
                     fontFamily: "Poppins-Bold",
                     letterSpacing: .6)),
@@ -38,11 +37,13 @@ class FormCard extends StatelessWidget {
                 style: TextStyle(
                     fontFamily: "Poppins-Medium",
                     fontSize: ScreenUtil.getInstance().setSp(26))),
-            TextField(
+            TextFormField(
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
                   hintText: "Correo electrónico",
                   hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
+              validator: (value) => value.isEmpty ? 'El correo no puede estar vacío' : null,
+              //onSaved: (value) => _email = value.trim(),
             ),
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(30),
@@ -51,11 +52,13 @@ class FormCard extends StatelessWidget {
                 style: TextStyle(
                     fontFamily: "Poppins-Medium",
                     fontSize: ScreenUtil.getInstance().setSp(26))),
-            TextField(
+            TextFormField(
               obscureText: true,
               decoration: InputDecoration(
                   hintText: "Contraseña",
                   hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
+              validator: (value) => value.isEmpty ? 'La contraseña no puede estar vacía' : null,
+              //onSaved: (value) => _password = value.trim(),
             ),
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(35),
