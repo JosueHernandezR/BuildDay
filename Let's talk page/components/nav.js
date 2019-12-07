@@ -1,14 +1,20 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 
 const Nav = () => {
   return(
-  <nav className='red'>
+  <nav className='grey darken-2'>
     <div className='nav-wrapper container'>
-      <a href='/' className='brand-logo'>Logo</a>
+      <Link href='/'>
+        <a className='brando-logo'>Let's Talk</a>
+      </Link>
       <ul id='nav-mobile' className='right hide-on-med-and-down'>
-        <li><a href='devs.html'>Desarrolladores</a></li>
-        <li><a href='bussinesmodel.html'>Let's talk bussines</a></li>
+        <li><Link href='/devs'>
+          <a>Desarrolladores</a>
+        </Link></li>
+        <li><Link>
+          <a href='/bussines'>Let's talk bussines</a>
+        </Link></li>
       </ul>
     </div>
   </nav>
