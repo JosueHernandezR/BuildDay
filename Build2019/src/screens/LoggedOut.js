@@ -6,8 +6,9 @@ import{
     Image,
 } from 'react-native';
 import colors from '../styles/colors';
+import RoundedButton from '../components/buttons/RoundedButton';
 
-export default class LoggedOut extends extends Component{
+export default class LoggedOut extends Component{
     render() {
         return(
             <View style={styles.wrapper}>
@@ -18,6 +19,11 @@ export default class LoggedOut extends extends Component{
                     />
                     <Text style={styles.welcomeText}>
                         Bienvenidos a Let's Talk
+                        <RoundedButton
+                            text = "Continuar con Facebook"
+                            textColor={colors.green01}
+                            background = {colors.white}
+                        />
                     </Text>
                 </View>
                 
