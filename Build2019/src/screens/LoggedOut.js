@@ -16,7 +16,9 @@ export default class LoggedOut extends extends Component{
                         source={require('')}
                         style={styles.logo}
                     />
-                <Text style={styles.welcomeText}></Text>
+                    <Text style={styles.welcomeText}>
+                        Bienvenidos a Let's Talk
+                    </Text>
                 </View>
                 
             </View>
@@ -35,6 +37,12 @@ const styles = StyleSheet.create({
         display: 'flex',
         marginTop: 30,
         padding: 20,
+    },
+    welcomeText:{
+        fontSize: 30,
+        color: colors.white,
+        fontWeight: '300',
+        marginBottom: 40,
     },
     logo:{
         width: 50,
