@@ -5,16 +5,17 @@ import{
     View,
     Image,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 import colors from '../styles/colors';
 import RoundedButton from '../components/buttons/RoundedButton';
-
-export default class LoggedOut extends Component{
+export default class LoggedOut extends React.Component {
     render() {
         return(
             <View style={styles.wrapper}>
                 <View style={styles.welcomeWrapper}>
                     <Image
-                        source={require('')}
+                        source={require('../images/Recurso 1.png')}
                         style={styles.logo}
                     />
                     <Text style={styles.welcomeText}>
@@ -23,10 +24,10 @@ export default class LoggedOut extends Component{
                             text = "Continuar con Facebook"
                             textColor={colors.green01}
                             background = {colors.white}
+                            icon={<Icon name="facebook" size={20} style={styles.facebookButtonIcon}/>}
                         />
                     </Text>
                 </View>
-                
             </View>
         );
     }
@@ -56,5 +57,7 @@ const styles = StyleSheet.create({
         marginTop: 50,
         marginBottom: 40,
     },
-    
+    facebookButtonIcon:{
+        
+    },
 });

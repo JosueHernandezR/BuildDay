@@ -1,0 +1,11 @@
+{
+    "nombreApp" : "urban_track",
+    "rutas" : [
+        {
+            "ruta"  : "register"
+        },
+        {
+            "ruta"  : "profile"
+        }
+    ]
+}
